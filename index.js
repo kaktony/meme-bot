@@ -622,4 +622,4 @@ client.on('message', async message => {
 
 
 
-client.login("NzcwNTY4Mzg1MTI4ODI0ODMy.X5fduw.uV518Q-GiqBDgJYgHY2loPOGrJY");
+client.login("");
