@@ -17,14 +17,14 @@ const yt = require('ytdl-core');
 const prefix = "f";
 
 
-client.on("ready", () => {
+tony.on("ready", () => {
   console.log(
-    `Online In Servers : ${client.guilds.size} | Users : ${client.users.size}`
+    `Online In Servers : ${tony.guilds.size} | Users : ${tony.users.size}`
   );
   let statuses = [`PREFIX fhelp`,];
   setInterval(function () {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
-    client.user.setActivity(STREAMING, {
+   tony.user.setActivity(STREAMING, {
       type: "PLAYING",
       url: "https://www.twitch.tv/faith"
     });
@@ -36,7 +36,7 @@ client.on("ready", () => {
 
 
 
-client.on('message', (message) => {
+tony.on('message', (message) => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
   if (!message.guild || !message.member || message.author.bot)
     return;
@@ -74,26 +74,26 @@ client.on('message', (message) => {
 });
 
 
-client.on('message', message => {
+tony.on('message', message => {
   if (message.content == prefix + 'link') {
     let embed = new Discord.MessageEmbed()
       .setColor(`#000000`)
       .setFooter("> TONY BOT")
       .setTitle(`INVITE KA `)
-      .setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
+      .setURL(``)
     message.channel.send(embed)
   }
 });
 
 
 
-client.on('message', message => {
+tony.on('message', message => {
   if (message.content == prefix + 'link') {
     let embed = new Discord.MessageEmbed()
       .setColor(`#000000`)
       .setFooter("♛ TONY BOT")
       .setTitle(`♛ دونیــــای کــــۆمـــیدیا`)
-      .setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
+      .setURL(``)
     message.channel.send(embed)
   }
 });
@@ -107,7 +107,7 @@ client.on('message', message => {
 
 
 
-client.on('message', msg => {
+tony.on('message', msg => {
   if (msg.content === prefix + "bot") {
     const embed = new Discord.MessageEmbed()
       .setColor("#000000")
@@ -128,14 +128,14 @@ client.on('message', msg => {
 
 
 
-client.on('message', message => {
+tony.on('message', message => {
   if (message.content.startsWith(prefix + "help")) {
     var embed = new Discord.MessageEmbed()
       .setTitle(`MEME BOT`)
       .setColor(`#000000`)
-      .setImage("https://cdn.discordapp.com/avatars/770568385128824832/be24227fe56c88485416ee459fc2c32c.png?size=4096")
-      .setThumbnail("https://cdn.discordapp.com/avatars/770568385128824832/be24227fe56c88485416ee459fc2c32c.png?size=4096")
-      .setFooter(`》EDIT TONY BOT`, `https://cdn.discordapp.com/avatars/770568385128824832/be24227fe56c88485416ee459fc2c32c.png?size=4096`)
+      .setImage("")
+      .setThumbnail("")
+      .setFooter(`》 TONY BOT`, ``)
       .setDescription(`
       **Help Comand** 
 \`f3\`, \`f4\`, \`f5\`,
@@ -270,17 +270,17 @@ function play(connection, message) {
   });
 
 }
-client.on("ready", () => {
+tony.on("ready", () => {
   console.log(`funny bot ${client.guilds.size} servers `)
 });
 
 
-client.on('message', async message => {
+tony.on('message', async message => {
 
 
   if (message.content === q3) {
     message.react('🔊')
-    message.reply(`يه كه م جار ئاو خرى ئه كه ى `);
+    message.reply(` `);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــە
@@ -288,53 +288,53 @@ client.on('message', async message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/fj87iF7N7Y4?feature=share ', { audioonly: true });
+        let stream = yt(' ', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q4) {
     message.react('🔊')
-    message.reply(`دە يان کوژن دە يان گيڕن `);
+    message.reply(` `);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.rl(`جــۆيــن ڤـــۆيـــس بـــە**ice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/l252kmMfkF4?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
   if (message.content === q5) {
     message.react('🔊')
-    message.reply(`دە ست کردە وە بـە لورە لور`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/bCRjRue84Zk?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
   if (message.content === q6) {
     message.react('🔊')
-    message.reply(`هــە ستـە دە ی`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/rLKT2H0jOdY?feature=share ', { audioonly: true });
+        let stream = yt(' ', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
   if (message.content === q7) {
     message.react('🔊')
-    message.reply(`کويرايت دايە`);
+    message.reply(``);
 
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
@@ -342,266 +342,266 @@ client.on('message', async message => {
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/0CgLsf26JGg?feature=share ', { audioonly: true });
+        let stream = yt(' ', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q8) {
     message.react('🔊')
-    message.reply(`ئـە مە f2 ئە سڵيە `);
+    message.reply(` `);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/n-47_T5ll10?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q9) {
     message.react('🔊')
-    message.reply(`وەی لەو قنانە`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/o3hZMSfQY1s', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q10) {
     message.react('🔊')
-    message.reply(`ئـە و بـە م ڕۆژيک`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/CZX-fuPAaBY', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q11) {
     message.react('🔊')
-    message.reply(`کيمان لە گە ڵە`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/oknoR8Pud3w', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q12) {
     message.react('🔊')
-    message.reply(`خۆشترين مۆسيقا`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.replvoice ** (`جــۆيــن ڤـــۆيـــس بـــەvoice`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/jmkVXm-KdH8', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q13) {
     message.react('🔊')
-    message.reply(`قسەی تازەی خدر بێگلاسی مەجنەعین `);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/ehiD91o8DRI', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q14) {
     message.react('🔊')
-    message.reply(`گوڵە تخوا بنوسە دەرد`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/t8Xz01o67kg', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q15) {
     message.react('🔊')
-    message.reply(`پێکەنی قۆر دەکات`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/RWgCVg0XarI', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q16) {
     message.react('🔊')
-    message.reply(`شـپرزە`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtu.be/OJIvpfmcrSc', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q17) {
     message.react('🔊')
-    message.reply(`بــاشم سوپــاس تۆ چۆنی`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/bwaO6J4CTwQ?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 ///lerawa dam nanawa
   if (message.content === q18) {
     message.react('🔊')
-    message.reply(`ده لايك كه ن شير كه ن بــگـاتە هــە موو دنيـا`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/Ns0S-8fj4Gk?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q19) {
     message.react('🔊')
-    message.reply(`وتم با وتى نا وتم با وتى نا`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/HOVH_2LGfkw?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q20) {
     message.react('🔊')
-    message.reply(`هه سته حيز`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/uxFUS1f_ypg?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q21) {
     message.react('🔊')
-    message.reply(`ئــە گـە ر داوات  ليبکە م`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/GSFpPsyJaCk?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q22) {
     message.react('🔊')
-    message.reply(`مناڵی ئيسـە بـۆ بامێ ناخوا`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://youtube.com/shorts/dUrqgJ6z6BY?feature=share', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q23) {
     message.react('🔊')
-    message.reply(`بـە ڕوە ڵا حە ز ناکە م ڕوو بدا`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=czXuMjLnbg8', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q24) {
     message.react('🔊')
-    message.reply(`ئــە م خويڕيە بـە دزيــە وە ئــە م کارە ی کردوە`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=zkJzrvXSV-8', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
   if (message.content === q25) {
     message.react('🔊')
-    message.reply(`بــە خوا ســاقــتی کوڕم`);
+    message.reply(``);
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
       return message.repl(`جــۆيــن ڤـــۆيـــس بـــەvoice**`);
     }
     voiceChannel.join()
       .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=zrOZTTvi_Xw', { audioonly: true });
+        let stream = yt('', { audioonly: true });
         const dispatcher = connnection.play(stream);
       });
   }
 
 
 
-  if (message.content === "-stop") {
+  if (message.content === "fstop") {
     var servers = {};
 
     if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
@@ -609,8 +609,8 @@ client.on('message', async message => {
   }
 
   if (message.content === "server2quran") {
-    message.channel.send(` QuranBot
-شكرا لإستعمال البوت | Thanks You
+    message.channel.send(` meme bot
+ | Thanks You
  `)
   }
 })
@@ -622,4 +622,4 @@ client.on('message', async message => {
 
 
 
-client.login("");
+tony.login("");
