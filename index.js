@@ -14,14 +14,14 @@ app.use('/ping', (req, res) => {
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const yt = require('ytdl-core');
-const prefix = "f";
+const prefix = "";
 
 
 tony.on("ready", () => {
   console.log(
     `Online In Servers : ${tony.guilds.size} | Users : ${tony.users.size}`
   );
-  let statuses = [`PREFIX fhelp`,];
+  let statuses = [`PREFIX `,];
   setInterval(function () {
     let STREAMING = statuses[Math.floor(Math.random() * statuses.length)];
    tony.user.setActivity(STREAMING, {
